@@ -1,21 +1,37 @@
 @font-face {
-    font-family: "cubano";
-    src: url(fonts/Cubano-Regular.otf);
+  font-family: "cubano";
+  src: url(fonts/Cubano-Regular.otf);
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    /* background-color: black;
-    background-image: radial-gradient(rgba(255, 255, 255, .8), transparent 60%); */
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(50, 50, 50);
 }
 
 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  margin: 0 0 0 2rem;
+  padding-top: 3rem;
+  font-family: "cubano";
+  font-size: 5rem;
+  color: goldenrod;
+  text-shadow: 2px 2px 0px black;
+}
+
+h2 {
+    padding-top: 2rem;
+    margin-top: 0;
 }
 
 /* ********** */
@@ -23,179 +39,205 @@ ul {
 /* ********** */
 
 #menu-btn {
-    height: 50px;
-    width: 50px;
-    position: fixed;
-    top: 15px;
-    right: 15px;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  top: 15px;
+  right: 15px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  
-    transition: all .5s ease-in-out;
-  
-    cursor: pointer;
-    z-index: 100;
-  }
-  
-  #menu-btn__brgr {
-    height: 5px;
-    width: 30px;
-    background-color: black;
-    transition: all .2s ease-in-out;
-  }
-  
-  #menu-btn__brgr::before,
-  #menu-btn__brgr::after {
-    content: "";
-    position: absolute;
-    height: 5px;
-    width: 30px;
-    background-color: black;
-    transition: all .2s ease-in-out;
-  }
-  
-  #menu-btn__brgr::before {
-    transform: translateY(-8px);
-  }
-  
-  #menu-btn__brgr::after {
-    transform: translateY(8px);
-  }
-  
-  /* BURGER ANIMATION */
-    
-  #menu-btn.open #menu-btn__brgr {
-    background-color: transparent;
-  }
-  
-  #menu-btn.open #menu-btn__brgr::before {
-    transform: rotate(45deg);
-  }
-  
-  #menu-btn.open #menu-btn__brgr::after {
-    transform: rotate(-45deg);
-  }
-  
-  /* NAV MENU */
-  
-  #menu {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 50px 0 100px;
-  
-    transform: scale(0,1);
-  
-    opacity: 0;
-  
-    transition:
-      opacity ease-in-out .3s,
-      transform 0s .3s;
-    display: flex;
-    flex-direction: column;
-    align-items: space-between;
-    justify-content: space-between;
-    z-index: 99;
-    
-    background: rgba(0, 0, 0, .9);
-    -webkit-font-smoothing: antialiased;  /* to stop flickering of text in safari */
-    font-family: sans-serif;
-  }
-  
-  #menu.open {
-      transform: scale(1,1);
-      transition: all ease-in-out .2s;
-  
-      opacity: 1;
-  }
-  
-  #menu a {
-    color: yellow;
-    text-shadow: 2px 2px 0 purple;
-    }
-  
-  #menu a:hover {
-    color: tomato;
-  }
-  
-  #menu li {
-    display: block;
-    opacity: 0;
-    font-size: 2rem;
-    transform: perspective(1000px) translateZ(300px);
-    transition: all .1s;
-    text-align: center;
-  }
-  
-  #menu li.open {
-    opacity: 1;
-    transform: perspective(0) translateZ(0);
-    transition: all ease-in-out .2s .2s;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.5s ease-in-out;
+
+  cursor: pointer;
+  z-index: 100;
+}
+
+#menu-btn__brgr {
+  height: 5px;
+  width: 30px;
+  background-color: black;
+  box-shadow: 1px 1px 0 goldenrod;
+  transition: all 0.2s ease-in-out;
+}
+
+#menu-btn__brgr::before,
+#menu-btn__brgr::after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 30px;
+  background-color: black;
+  box-shadow: 1px 1px 0 goldenrod;
+  transition: all 0.2s ease-in-out;
+}
+
+#menu-btn__brgr::before {
+  transform: translateY(-8px);
+}
+
+#menu-btn__brgr::after {
+  transform: translateY(8px);
+}
+
+/* BURGER ANIMATION */
+
+#menu-btn.open #menu-btn__brgr {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+#menu-btn.open #menu-btn__brgr::before {
+  transform: rotate(45deg);
+  box-shadow: none;
+  background-color: goldenrod;
+}
+
+#menu-btn.open #menu-btn__brgr::after {
+  transform: rotate(-45deg);
+  box-shadow: none;
+  background-color: goldenrod;
+}
+
+/* NAV MENU */
+
+#menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 50px 0 100px;
+
+  transform: scale(0,1);
+  transform-origin: right;
+  opacity: 0;
+
+  transition: opacity ease-in-out 0.3s, transform 0s 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: space-between;
+  z-index: 99;
+
+  background: rgba(0, 0, 0, 0.9);
+  -webkit-font-smoothing: antialiased; /* to stop flickering of text in safari */
+  font-family: sans-serif;
+}
+
+#menu.open {
+    transform: scale(1,1);
+  transition: all ease-in-out 0.2s;
+
+  opacity: 1;
+}
+
+#menu a {
+  font-family: "cubano";
+  text-decoration: none;
+  color: goldenrod;
+}
+
+#menu a:hover {
+  color: tomato;
+}
+
+#menu li {
+  display: block;
+  opacity: 0;
+  font-size: 2rem;
+  transform: perspective(1000px) translateZ(300px);
+  transition: all 0.1s;
+  text-align: center;
+}
+
+#menu li.open {
+  opacity: 1;
+  transform: perspective(0) translateZ(0);
+  transition: all ease-in-out 0.2s 0.2s;
+}
+
+/* ****** */
+/* HEADER */
+/* ****** */
+
+header {
+  margin: 0;
+  padding: 0;
+  min-height: 500px;
+  background-image: url("img/arrow.jpg");
+  background-attachment: fixed;
+  background-position: bottom;
+  background-size: cover;
+}
 
 /* ******** */
 /* Projects */
 /* ******** */
 
+#project-section {
+    z-index: 0;
+    /* background-image: url("img/arrow.jpg"); */
+    padding-bottom: 50px;
+}
+
 #projects {
-    margin: 0 1rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 3rem;
-    align-items: center;
-    justify-content: space-around;
+  margin: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 3rem;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .project {
-    position: relative;
-    height: 100%;
+  position: relative;
+  height: 100%;
 }
 
 .project-title {
-    font-size: 2rem;
-    font-family: "cubano";
-    text-align: center;
-    color: skyblue;
-    background-color: rgba(0, 0, 0, .8);
-    text-shadow: 0 3px 0 goldenrod;
-    transition: ease-in-out .2s;
+  font-size: 2rem;
+  font-family: "cubano";
+  text-align: center;
+  color: goldenrod;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: ease-in-out 0.2s;
 
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 99%;
+  width: 100%;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .project-title:hover {
-    opacity: 0;
+  opacity: 0;
 }
 
 .description {
-    width: 100%;
-    height: 50px;
-    background-color: black;
-    color: white;
-    position: absolute;
-    bottom: 5px;
-    transition: ease-in-out .3s .1s;
-    z-index: -1;
-    margin: 0;
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  bottom: 5px;
+  transition: ease-in-out 0.3s 0.1s;
+  z-index: -1;
+  margin: 0;
 }
-  
+
 /* ****** */
 /* Images */
 /* ****** */
 
 .project-img {
-    width: 100%;
+  width: 100%;
 }
