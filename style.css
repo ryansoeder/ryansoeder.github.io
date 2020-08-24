@@ -1,4 +1,26 @@
+@font-face {
+    font-family: "cubano";
+    src: url(fonts/Cubano-Regular.otf);
+}
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    background-image: radial-gradient(rgba(255, 255, 255, .8), transparent 60%);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ********** */
+/* NAVIGATION */
+/* ********** */
 
 #menu-btn {
     height: 50px;
@@ -115,4 +137,63 @@
     transform: perspective(0) translateZ(0);
     transition: all ease-in-out .2s .2s;
   }
+
+/* ******** */
+/* Projects */
+/* ******** */
+
+#projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1em;
+    align-items: space-around;
+    justify-items: center;
+}
+
+.project {
+    position: relative;
+    width: 320px;
+    height: auto;
+}
+
+.project-title {
+    font-size: 2rem;
+    font-family: "cubano";
+    text-align: center;
+    color: cornflowerblue;
+    background-color: rgba(0, 0, 0, .8);
+    text-shadow: 0 3px 0 darkgoldenrod;
+    transition: ease-in-out .2s;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-title:hover {
+    opacity: 0;
+}
+
+.project p {
+    position: absolute;
+    bottom: 0;
+    transition: ease-in-out .2s .2s;
+}
+
+/* .projects p:hover {
+    bottom: -30px;
+} */
   
+/* ****** */
+/* Images */
+/* ****** */
+
+.project-img {
+    width: 100%;
+}
