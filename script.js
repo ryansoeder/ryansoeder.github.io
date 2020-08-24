@@ -1,3 +1,5 @@
+// NAV MENU FUNCTIONALITY
+
 const body = document.querySelector('body');
 const menuBtn = document.querySelector('#menu-btn');
 const menu = document.querySelector('#menu');
@@ -42,4 +44,17 @@ body.addEventListener('click', event => {
         
         menuOpen = false;
     }
+});
+
+// PROJECT DESCRIPTION DROP-DOWN
+
+const projectTitle = document.querySelectorAll(".project-title");
+
+projectTitle.forEach((title) => {
+    title.addEventListener('mouseover', event => {
+        title.nextElementSibling.style.transform = "translateY(50px)";
+    });
+    title.addEventListener('mouseout', event => {
+        title.nextElementSibling.style.transform = "translateY(0px)";
+    });
 });
