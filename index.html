@@ -29,7 +29,7 @@
         Ryan Soeder
       </h1>
 
-      <section id="bio-section">
+      <section id="bio-section" class="rellax" data-rellax-speed="10">
         <h2>
           Bio
         </h2>
@@ -52,17 +52,17 @@
 
         <ul id="projects">
           <li class="project">
-            <img class="project-img" src="img/piranhasaurus.png" alt="">
+            <img class="project-img" src="img/piranhasaurus.png" alt="" />
             <span class="project-title">Piranhasaurus</span>
             <p class="description">description...</p>
           </li>
           <li class="project">
-            <img class="project-img" src="img/cactusflower.png" alt="">
+            <img class="project-img" src="img/cactusflower.png" alt="" />
             <span class="project-title">Cactus Flower Boutique</span>
             <p class="description">description...</p>
           </li>
           <li class="project">
-            <img class="project-img" src="img/spacepeople.png" alt="">
+            <img class="project-img" src="img/spacepeople.png" alt="" />
             <span class="project-title">Space People</span>
             <p class="description">description...</p>
           </li>
@@ -90,5 +90,15 @@
         </p>
       </section>
     </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"
+      integrity="sha512-f5HTYZYTDZelxS7LEQYv8ppMHTZ6JJWglzeQmr0CVTS70vJgaJiIO15ALqI7bhsracojbXkezUIL+35UXwwGrQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let rellax = new Rellax(".rellax");
+    </script>
+
   </body>
 </html>
