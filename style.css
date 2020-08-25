@@ -178,6 +178,20 @@ header {
   background-size: cover;
 }
 
+header h1 {
+  width: 300px;
+}
+
+#bio-section {
+  margin: 3rem 1rem;
+  padding: 1rem;
+  background-color: goldenrod;
+  border-radius: 15px;
+  height: 300px;
+  width: 300px;
+  float: right;
+}
+
 /* ******** */
 /* Projects */
 /* ******** */
@@ -244,4 +258,14 @@ header {
 
 .project-img {
   width: 100%;
+}
+
+/* ******** */
+/* Clearfix */
+/* ******** */
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
