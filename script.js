@@ -12,22 +12,12 @@ menuBtn.addEventListener('click', event => {
     if (!menuOpen) {
         menuBtn.classList.add('open');
         menu.classList.add('open');
-
-        menuItems.forEach((item) => {
-            item.classList.add("open");
-          });      
-
         menuOpen = true;
 
         event.stopPropagation();
     } else {
         menuBtn.classList.remove('open');
         menu.classList.remove('open');
-
-        menuItems.forEach((item) => {
-            item.classList.remove("open");
-          });      
-
         menuOpen = false;
 
         event.stopPropagation();
