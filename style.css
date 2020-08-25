@@ -25,17 +25,29 @@ ul {
 }
 
 h1 {
-  margin: 0 0 0 1rem;
-  padding-top: 3rem;
   font-family: "cubano";
   font-size: 5rem;
   color: goldenrod;
   text-shadow: 2px 2px 0px black;
+  margin: 0;
 }
 
 h2 {
-    padding-top: 2rem;
     margin-top: 0;
+    font-size: 2rem;
+}
+
+p {
+  font-size: .9rem;
+}
+
+/* ********** */
+/* DRY STYLES */
+/* ********** */
+
+.section-padding {
+  margin: 0;
+  padding: 2rem 1rem;
 }
 
 /* ********** */
@@ -160,8 +172,6 @@ h2 {
 /* ****** */
 
 header {
-  margin: 0;
-  padding: 0;
   min-height: 500px;
   background-image: url("img/arrow.jpg");
   background-attachment: fixed;
@@ -174,13 +184,16 @@ header h1 {
 }
 
 #bio-section {
-  margin: 3rem 1rem;
+  margin: 0;
   padding: 1rem;
   background-color: goldenrod;
   border-radius: 15px;
   height: 300px;
   width: 300px;
   float: right;
+
+  font-family: monospace;
+  /* text-align: justify; */
 }
 
 /* ******** */
