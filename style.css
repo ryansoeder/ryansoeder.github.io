@@ -12,6 +12,10 @@ body {
   margin: 0;
   padding: 0;
   background-color: rgb(50, 50, 50);
+  background-image: url(img/slate.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 ul {
@@ -21,7 +25,7 @@ ul {
 }
 
 h1 {
-  margin: 0 0 0 2rem;
+  margin: 0 0 0 1rem;
   padding-top: 3rem;
   font-family: "cubano";
   font-size: 5rem;
