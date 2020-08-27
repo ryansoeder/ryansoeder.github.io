@@ -3,48 +3,50 @@
 const body = document.querySelector('body');
 const menuBtn = document.querySelector('#menu-btn');
 const menu = document.querySelector('#menu');
-const menuItems = document.querySelectorAll("#menu li");
+const menuItems = document.querySelectorAll('#menu li');
 
 let menuOpen = false;
 
-menuBtn.addEventListener('click', event => {
+menuBtn.addEventListener('click', (event) => {
+	if (!menuOpen) {
+		menuBtn.classList.add('open');
+		menu.classList.add('open');
+		menuOpen = true;
 
-    if (!menuOpen) {
-        menuBtn.classList.add('open');
-        menu.classList.add('open');
-        menuOpen = true;
+		event.stopPropagation();
+	} else {
+		menuBtn.classList.remove('open');
+		menu.classList.remove('open');
+		menuOpen = false;
 
-        event.stopPropagation();
-    } else {
-        menuBtn.classList.remove('open');
-        menu.classList.remove('open');
-        menuOpen = false;
-
-        event.stopPropagation();
-    }
+		event.stopPropagation();
+	}
 });
 
 // close if clicked anywhere
 
-body.addEventListener('click', event => { 
-    
-    if (menuOpen) {
-        menu.classList.remove('open');
-        menuBtn.classList.remove('open');
-        
-        menuOpen = false;
-    }
+body.addEventListener('click', (event) => {
+	if (menuOpen) {
+		menu.classList.remove('open');
+		menuBtn.classList.remove('open');
+
+		menuOpen = false;
+	}
 });
 
 // PROJECT DESCRIPTION DROP-DOWN
 
-const projectTitle = document.querySelectorAll(".project-title");
+const projectTitle = document.querySelectorAll('.project-title');
 
 projectTitle.forEach((title) => {
-    title.addEventListener('mouseover', event => {
-        title.nextElementSibling.style.transform = "translateY(50px)";
-    });
-    title.addEventListener('mouseout', event => {
-        title.nextElementSibling.style.transform = "translateY(0px)";
-    });
+	title.addEventListener('mouseover', (event) => {
+        title.nextElementSibling.style.transform = 'translateY(100%)';
+        title.nextElementSibling.style.opacity = '1';
+
+	});
+	title.addEventListener('mouseout', (event) => {
+        title.nextElementSibling.style.transform = 'translateY(0)';
+        title.nextElementSibling.style.opacity = '0';
+
+	});
 });

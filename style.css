@@ -12,7 +12,7 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: rgb(50, 50, 50);
-  background-image: url(img/grid_03.jpg);
+	background-image: url(img/grid_03.jpg);
 }
 
 ul {
@@ -30,18 +30,22 @@ h1 {
 }
 
 h2 {
-  margin-top: 0;
-  padding: 1rem;
-  font-family: 'cubano';
-  font-size: 2rem;
-  color: black;
-  background-color: goldenrod;
-  display: inline-block;
-  border-radius: 5px;
+	margin: 0;
+	padding: 1rem;
+	font-family: 'cubano';
+	font-size: 2rem;
+	color: black;
+	background-color: goldenrod;
+	display: inline-block;
+	border-radius: 5px;
 }
 
 p {
 	font-size: 0.9rem;
+}
+
+a {
+	text-decoration: none;
 }
 
 /* ********** */
@@ -176,6 +180,7 @@ p {
 
 header {
 	min-height: 500px;
+	display: relative;
 	background-image: url('img/arrow.jpg');
 	background-attachment: fixed;
 	background-position: bottom;
@@ -185,7 +190,7 @@ header {
 #bio-section {
 	margin: 0;
 	padding: 1rem;
-  background-color: goldenrod;
+	background-color: goldenrod;
 	border-radius: 15px;
 	width: 300px;
 	float: right;
@@ -194,35 +199,35 @@ header {
 }
 
 #contact {
-  margin: 0;
+	margin: 0;
 	padding: 1rem;
-  background-color: goldenrod;
+	background-color: goldenrod;
 	border-radius: 15px;
 	width: 200px;
-  position: absolute;
-  bottom: 5%;
-  right: 4rem;
+	position: absolute;
+	top: 350px;
+	right: 4rem;
 
-  display: flex;
-  flex-wrap: wrap;
-  justify-items: space-around;
+	display: flex;
+	flex-wrap: wrap;
+	justify-items: space-around;
 }
 
 #contact li {
-  width: 40%;
-  margin: 5%;
-  text-align: center;
-  font-family: monospace;
-  line-height: 0;
+	width: 40%;
+	margin: 5%;
+	text-align: center;
+	font-family: monospace;
+	line-height: 0;
 }
 
 #contact li a {
-  text-decoration: none;
-  color: black;
+	text-decoration: none;
+	color: black;
 }
 
 #contact li img {
-  width: 100%;
+	width: 100%;
 }
 
 /* ******** */
@@ -231,14 +236,17 @@ header {
 
 #project-section {
 	z-index: 0;
-	padding-bottom: 50px;
+	text-align: 0;
+}
+
+#project-h2 {
+	margin-top: 1rem;
 }
 
 #projects {
 	margin: 0 1rem;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-	grid-gap: 3rem;
+	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-around;
 }
@@ -246,6 +254,8 @@ header {
 .project {
 	position: relative;
 	height: 100%;
+	flex: 0 0 300px;
+	margin: 5rem 0;
 }
 
 .project-title {
@@ -273,14 +283,18 @@ header {
 
 .description {
 	width: 100%;
-	height: 50px;
+	height: auto;
+	margin: 0;
+	padding: 10px;
+	position: absolute;
+	bottom: 4px;
 	background-color: black;
 	color: white;
-	position: absolute;
-	bottom: 5px;
-	transition: ease-in-out 0.3s 0.1s;
+	font-family: monospace;
+	transition: ease-in-out 0.2s 0.2s;
 	z-index: -1;
-	margin: 0;
+
+	opacity: 0;
 }
 
 /* ********* */
@@ -291,8 +305,8 @@ header {
 	margin: 0;
 	padding: 1rem;
 	background-color: goldenrod;
-  border-radius: 15px;
-  font-family: monospace;
+	border-radius: 15px;
+	font-family: monospace;
 	width: 90%;
 	float: left;
 }
