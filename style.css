@@ -325,3 +325,18 @@ header {
 	display: table;
 }
 
+/* ************* */
+/* MEDIA QUERIES */
+/* ************* */
+
+@media (hover: none) {
+	
+	.project-title:hover {
+		opacity: 1;
+	}
+	
+	.description {
+		opacity: 1;
+		transform: translateY(100%);
+	}
+}
