@@ -15,7 +15,7 @@ body {
 	background-image: url(img/grid_03.jpg);
 }
 
-ul {
+ul, li {
 	list-style: none;
 	padding: 0;
 	margin: 0;
@@ -26,7 +26,7 @@ h1 {
 	font-size: calc(3rem + 7vw);
 	color: goldenrod;
 	text-shadow: 2px 2px 0px black;
-	margin: 0;
+	margin: 1rem;
 }
 
 h2 {
@@ -210,7 +210,6 @@ header {
 
 	display: flex;
 	flex-wrap: wrap;
-	justify-items: space-around;
 }
 
 #contact li {
@@ -236,11 +235,10 @@ header {
 
 #project-section {
 	z-index: 0;
-	text-align: 0;
 }
 
 #project-h2 {
-	margin-top: 1rem;
+	margin: 1rem 0 0 1rem;
 }
 
 #projects {
@@ -295,7 +293,7 @@ header {
 	background-color: black;
 	color: white;
 	font-family: monospace;
-	transition: ease-in-out 0.2s 0.2s;
+	transition: transform ease-in-out 0.2s 0.2s, opacity ease-out 0.1s 0.3s;
 	z-index: -1;
 
 	opacity: 0;
@@ -330,7 +328,7 @@ header {
 /* ************* */
 
 @media (hover: none) {
-	
+
 	.project-title:hover {
 		opacity: 1;
 	}
@@ -338,5 +336,81 @@ header {
 	.description {
 		opacity: 1;
 		transform: translateY(100%);
+	}
+}
+
+@media (min-width: 620px) {
+	#contact {
+		top: 250px;
+	}
+}
+
+@media (min-width: 850px) {
+	h1 {
+		font-size: 6.73rem;
+	}
+
+	#bio-section {
+		margin-right: 13rem;
+	}
+
+	#contact {
+		top: 4.8rem;
+		right: 3rem;
+		width: auto;
+		display: inherit;
+	}
+
+	#contact li {
+		width: auto;
+		text-align: center;
+		margin: 37.5px 0;
+	}
+
+	#contact li a {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#contact li img {
+		width: 67px;
+	}
+}
+
+@media (min-width: 1270px) {
+	header {
+		height: 596px;
+	}
+	#bio-section {
+		position: absolute;
+		height: 487.5px;
+		float: none;
+		top: 4.8rem;
+		right: 0;
+		/* font-size: 1.2rem; */
+	}
+
+	#reference-section {
+		position: absolute;
+		top: 11.5rem;
+		right: 35.5rem;
+		width: 700px;
+		height: 383px;
+	}
+}
+
+@media (min-width: 1800px) {
+	h1 {
+		width: 300px;
+		margin-left: 3rem;
+	}
+
+	#reference-section {
+		top: 4.8rem;
+		height: 487.5px;
+	}
+
+	p {
+		font-size: 1.1rem;
 	}
 }
