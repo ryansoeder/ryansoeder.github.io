@@ -17,7 +17,8 @@ main {
 	background-image: url(img/grid_03.jpg);
 }
 
-ul, li {
+ul,
+li {
 	list-style: none;
 	padding: 0;
 	margin: 0;
@@ -270,7 +271,7 @@ header {
 	border-top: 5px solid tomato;
 	border-bottom: 5px solid tomato;
 	border-radius: 5px;
-	transition: ease-in-out 0.2s;
+	transition: ease-in-out 0.2s 0.2s;
 
 	position: absolute;
 	top: 0;
@@ -285,6 +286,7 @@ header {
 
 .project-title:hover {
 	opacity: 0;
+	transition: ease-in-out 0.2s;
 }
 
 .description {
@@ -300,10 +302,16 @@ header {
 	color: goldenrod;
 	font-family: monospace;
 	font-size: 11.5px;
-	transition: transform ease-in-out 0.2s 0.2s, opacity ease-out 0.1s 0.3s;
+	transition: transform ease-in-out 0.2s, opacity ease-out 0.1s 0.1s;
 	z-index: -1;
 
 	opacity: 0;
+}
+
+.description.open {
+	transform: translateY(100%);
+	opacity: 1;
+	transition: transform ease-in-out 0.2s 0.2s, opacity ease-out 0.1s 0.3s;
 }
 
 /* ********* */
@@ -355,7 +363,6 @@ footer h2 {
 /* ************* */
 
 @media (hover: none) {
-
 	.project-title {
 		background-color: rgba(0, 0, 0, 0.8);
 	}
@@ -363,7 +370,7 @@ footer h2 {
 	.project-title:hover {
 		opacity: 1;
 	}
-	
+
 	.description {
 		opacity: 1;
 		transform: translateY(100%);

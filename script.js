@@ -40,13 +40,9 @@ const projectTitle = document.querySelectorAll('.project-title');
 
 projectTitle.forEach((title) => {
 	title.addEventListener('mouseover', (event) => {
-        title.nextElementSibling.style.transform = 'translateY(100%)';
-        title.nextElementSibling.style.opacity = '1';
-
+        title.nextElementSibling.classList.add('open');
 	});
 	title.addEventListener('mouseout', (event) => {
-        title.nextElementSibling.style.transform = 'translateY(0)';
-        title.nextElementSibling.style.opacity = '0';
-
+        title.nextElementSibling.classList.remove('open');
 	});
 });
