@@ -311,7 +311,7 @@ header {
 
 }
 
-.description.open {
+.project-title:hover ~ .description {
 	transform: scaleY(1);
 	transition: 
 		transform ease-in-out 0.2s 0.2s;

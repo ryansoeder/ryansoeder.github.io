@@ -36,13 +36,13 @@ body.addEventListener('click', (event) => {
 
 // PROJECT DESCRIPTION DROP-DOWN
 
-const projectTitle = document.querySelectorAll('.project-title');
+// const projectTitle = document.querySelectorAll('.project-title');
 
-projectTitle.forEach((title) => {
-	title.addEventListener('mouseover', (event) => {
-        title.nextElementSibling.classList.add('open');
-	});
-	title.addEventListener('mouseout', (event) => {
-        title.nextElementSibling.classList.remove('open');
-	});
-});
+// projectTitle.forEach((title) => {
+// 	title.addEventListener('mouseover', (event) => {
+//         title.nextElementSibling.classList.add('open');
+// 	});
+// 	title.addEventListener('mouseout', (event) => {
+//         title.nextElementSibling.classList.remove('open');
+// 	});
+// });
