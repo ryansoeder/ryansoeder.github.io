@@ -375,8 +375,7 @@ footer h2 {
 	}
 
 	.description {
-		opacity: 1;
-		transform: translateY(100%);
+		transform: scaleY(1);
 	}
 }
 
