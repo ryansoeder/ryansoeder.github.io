@@ -368,6 +368,7 @@ footer h2 {
 @media (hover: none) {
 	.project-title {
 		background-color: rgba(0, 0, 0, 0.8);
+		border-bottom: none;
 	}
 
 	.project-title:hover {
@@ -376,6 +377,12 @@ footer h2 {
 
 	.description {
 		transform: scaleY(1);
+	}
+}
+
+@media (max-width: 420px) {
+	.project {
+		margin: 0 1rem 13rem;
 	}
 }
 
