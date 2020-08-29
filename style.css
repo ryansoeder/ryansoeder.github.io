@@ -303,6 +303,7 @@ header {
 	background-color: black;
 	color: goldenrod;
 	font-family: monospace;
+	font-size: 11.5px;
 	transition: transform ease-in-out 0.2s 0.2s, opacity ease-out 0.1s 0.3s;
 	z-index: -1;
 
@@ -380,7 +381,6 @@ footer h2 {
 
 	.project {
 		flex: 0 0 400px;
-		margin: 0 1rem 9rem;
 	}
 }
 
