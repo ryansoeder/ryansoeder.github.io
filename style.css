@@ -45,6 +45,7 @@ h2 {
 
 a {
 	text-decoration: none;
+	color: black;
 }
 
 /* ********** */
@@ -346,6 +347,10 @@ footer {
 	align-items: flex-start;
 }
 
+footer a {
+	display: block;
+}
+
 footer h2 {
 	width: 100%;
 	text-align: center;
@@ -426,7 +431,7 @@ footer h2 {
 	#contact li {
 		width: auto;
 		text-align: center;
-		margin: 37.5px 0;
+		margin: 25.5px 0;
 	}
 
 	#contact li a {
@@ -455,9 +460,13 @@ footer h2 {
 		font-size: 1rem;
 	}
 
+	#contact li {
+		margin: 37.5px 0;
+	}
+
 	#reference-section {
 		position: absolute;
-		top: 11.5rem;
+		top: 11.4rem;
 		right: 35.5rem;
 		width: 700px;
 		height: 383px;
